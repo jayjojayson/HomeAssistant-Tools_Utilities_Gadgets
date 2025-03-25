@@ -3,6 +3,7 @@
 mehr Details zum Code hier
 https://github.com/jayjojayson/blueprint-auto-luftreiniger
 
+Ikea starkvind control - Arbeitet mit Ikea-starkvind oder anderen Luftreinigern. Getestet mit starkvind.
 
 📘Dieser Blueprint schaltet (mehrere) Luftreiniger nach Entität, Schalter oder Schalter am Gerät ein und automatisch nach eingestelltem Luftwert wieder aus. Zeitversatz nachdem die Aktion ausgeführt wird liegt bei 3min.
 
@@ -17,7 +18,7 @@ https://github.com/jayjojayson/blueprint-auto-luftreiniger
 #
 more Details to the Code:
 
-English Description of the Blueprint:
+English Description of the Blueprint: https://github.com/jayjojayson/blueprint-auto-luftreiniger
 
 :blue_book:This Blueprint switches the air purifier on according to an entity, switch or switch on the device and automatically switches it off after the air value has been set. The time delay after the action is carried out is 3 minutes.
 
