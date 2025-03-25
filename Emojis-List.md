@@ -264,7 +264,8 @@ Die ultimative Referenz für alle GitHub-emoji Codes. Die Emojis können auch an
 | `:memo:` | 📝 | `:book:` | 📖 |
 | `:art:` | 🎨 | `:microphone:` | 🎤 |
 | `:headphones:` | 🎧 | `:trumpet:` | 🎺 |
-| `:saxophone:` | 🎷 | `:guitar:` | 🎸 |
+| `:saxophone:` | 🎷 | `:guitar:` | 🎸 | 
+| `:fan:` | 𖣘  | | | 
 
 ### Kleidung & Accessories
 | Code | Emoji | Code | Emoji |
