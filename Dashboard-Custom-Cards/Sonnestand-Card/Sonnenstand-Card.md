@@ -82,7 +82,7 @@ template:
 
 ---
 
-:arrow_right: Die hier gezeigten Bilder packt ihr bitte in das Verzeichnis `www/sonne` z.B. mit dem FileExplorer in HA! Geht natürlich auch mit einem anderen Ordner, aber so klappt direkt die Verlinkung mit dem Code aus meiner Card. Die Fotos findet ihr im Ordner Sonne
+:arrow_right: Die hier gezeigten Bilder packt ihr bitte in das Verzeichnis `www/sonne` z.B. mit dem FileExplorer in HA! Geht natürlich auch mit einem anderen Ordner, aber so klappt direkt die Verlinkung mit dem Code aus meiner Card. Die Fotos findet ihr im Ordner.
 
 ---
 
