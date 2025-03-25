@@ -95,7 +95,7 @@ Die ultimative Referenz für alle GitHub-emoji Codes.
 
 ---
 
-## 🌿 Nature Emojis [➔](#-nature-)
+## 🌿 Nature [➔](#-nature-)
 
 ### Wetter & Himmel
 | Code | Emoji | Code | Emoji |
