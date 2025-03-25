@@ -2,11 +2,11 @@
 
 Wenn man sich den Solar Optimizer anschaut, der einfach nur alle Paneel anzeigt, könnte man mit der Bildelemente Card direkt aus HA was schöneres basteln. Ich habe mal versucht eine Card zu erstellen. So sieht das Ergebnis für 4 Paneel aus. Kann entsprechend einfach vervielfältigt werden.
 
-### Solapaneel ausgeschalet
+### Solarpaneel ausgeschaltet
 ![image, 50%](https://github.com/user-attachments/assets/08720a9e-1885-4dae-a351-06d8e58a307a)
 
 
-### Solapaneel bei Leistung eingeschalet
+### Solarpaneel bei Leistung eingeschaltet
 ![image, 50%](https://github.com/user-attachments/assets/d7b7a951-cbab-47c0-b3bf-8e4fc3eb2761)
 
 
