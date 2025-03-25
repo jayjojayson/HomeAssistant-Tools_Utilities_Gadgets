@@ -13,7 +13,7 @@ Die ultimative Referenz für alle GitHub-emoji Codes.
 
 ---
 
-## 👥 People Emojis (#-people-) 
+## 👥 People Emojis [➔](#-people-) 
 
 ### Gesichter & Emotionen
 | Code | Emoji | Code | Emoji | Code | Emoji |
@@ -98,7 +98,7 @@ Die ultimative Referenz für alle GitHub-emoji Codes.
 
 ---
 
-## 🌿 Nature Emojis (#-nature-)
+## 🌿 Nature Emojis [➔](#-nature-)
 
 ### Wetter & Himmel
 | Code | Emoji | Code | Emoji |
@@ -175,7 +175,7 @@ Die ultimative Referenz für alle GitHub-emoji Codes.
 
 ---
 
-## 📦 Objects (#-objects-) 
+## 📦 Objects [➔](#-objects-) 
 
 ### Feste & Dekoration
 | Code | Emoji | Code | Emoji |
@@ -321,7 +321,7 @@ Die ultimative Referenz für alle GitHub-emoji Codes.
 
 ---
 
-## 🌍 Places (#-places-)
+## 🌍 Places [➔](#-places-)
 
 ### Gebäude & Unterkünfte
 | Code | Emoji | Code | Emoji |
@@ -393,7 +393,7 @@ Die ultimative Referenz für alle GitHub-emoji Codes.
 
 ---
 
-## 🔣 Symbols (#-symbols-) 
+## 🔣 Symbols [➔](#-symbols-) 
 
 ### Zahlen & Zeichen
 | Code | Emoji | Code | Emoji |
