@@ -14,7 +14,7 @@ Meine Vorstellung war jetzt, wenn kein Output von den Paneels kommt, dann sind s
 
 Das finde ich optisch auf jeden Fall ansprechender, hoffe es gefällt. :) Die aktuelle Leistung des jeweiligen Paneels kann man zusätzlich mit templates je nach aktueller Leistung einfärben. So sieht man schnell ob alle Paneel gut laufen oder z.B. eins rumzickt. Aber das kann ich gerade schlecht zeigen, weil keine Leistung zur Zeit anliegt. Einfach mal tagsüber draufschauen, dann sollte sich die Werte entsprechend einfärben.
 
-Die Bilder findet ihr wieder hier im Ordner, herunterladen und in den www Ordner in einen gewünschten Unterordner kopieren.
+📌 Die Bilder findet ihr wieder hier im Ordner, herunterladen und in den www Ordner in einen gewünschten Unterordner kopieren.
 
 ***Bildpfade und Entitäten müssen natürlich entsprechend ausgetauscht werden. Hatte die Bilder zum Test mal schnell in meinen "sonne" Ordner gepackt.***
 
