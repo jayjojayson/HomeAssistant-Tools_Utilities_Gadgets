@@ -1,6 +1,7 @@
 # ❤️ Emoji Cheat Sheet Table
 
 Die ultimative Referenz für alle GitHub-emoji Codes. Die Emojis können auch an jeder Stelle in Home Assistant verwendet werden (Notify, Cards, Notes). 
+
 *Klicke auf die Kategorien um direkt zum Abschnitt zu springen:*
 
 ## 📋 Inhaltsverzeichnis
