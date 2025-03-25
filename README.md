@@ -1,5 +1,5 @@
 # ✨ HomeAssistant-Tools_Utilities_Gadgets ✨
-### Home Assistant - Tools, Utilities &amp; Gadgets
+### Home Assistant - Tools, Utilities &amp; Gadgets :new: :cool:
 
 #### Hier werden nützliche Dinge wie Emojis, Scripte, Einstellungen und sonstiges für Home Assitant gesammelt und gespeichert.
 Mal schauen was mir noch so einfällt. ☺️
