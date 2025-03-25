@@ -7,9 +7,9 @@ Die ultimative Referenz für alle GitHub-emoji Codes.
 *Klicke auf die Kategorien um direkt zum Abschnitt zu springen:*
 
 ## 📋 Inhaltsverzeichnis
-| [👥 People](#-people) | [🌿 Nature](#-nature) | [📦 Objects](#-objects) |
+| [👥 People](#-people-) | [🌿 Nature](#-nature-) | [📦 Objects](#-objects-) |
 |----------------------|----------------------|------------------------|
-| [🌍 Places](#-places) | [🔣 Symbols](#-symbols) | 
+| [🌍 Places](#-places-) | [🔣 Symbols](#-symbols-) | 
 
 ---
 
