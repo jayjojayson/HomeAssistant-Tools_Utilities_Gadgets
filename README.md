@@ -1,7 +1,10 @@
-# HomeAssistant-Tools_Utilities_Gadgets
-Home Assistant - Tools, Utilities &amp; Gadgets
+# ✨ HomeAssistant-Tools_Utilities_Gadgets ✨
+### Home Assistant - Tools, Utilities &amp; Gadgets
 
-# Emoji Cheat Sheet ✨
+#### Hier werden nützliche Dinge wie Emojis, Scripte, Einstellungen und sonstiges für Home Assitant gesammelt und gespeichert.
+Mal schauen was mir noch so einfällt. ☺️
+
+# ❤️ Emoji Cheat Sheet Table
 
 Die ultimative Referenz für alle GitHub-emoji Codes.  
 *Klicke auf die Kategorien um direkt zum Abschnitt zu springen:*
