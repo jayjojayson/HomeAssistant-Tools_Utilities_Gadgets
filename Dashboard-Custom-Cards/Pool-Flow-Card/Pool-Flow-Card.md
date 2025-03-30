@@ -2,6 +2,9 @@
 
 Hi, heute möchte ich mal die ha-floorplan-card vorstellen, mit der man auch wunderbar Custom Kreisläufe von Strom, Wasser, Heizung, Solar usw. darstellen kann. Ich habe mich daran mal versucht und eine Flow-Card für meinen Pool erstellt. So sehe ich direkt, welche Pumpen laufen und welche Kreisläufe gerade aktiv sind.  Durch Nutzung der Card kann eine interaktive Darstellung realisiert werden.​
 
+![image](https://github.com/user-attachments/assets/2b339aff-3de8-4d9d-98ef-00b119002369)
+
+
 ## Erstellung einer individuellen Pool-Karte in Home Assistant
 
 📌 In diesem Tutorial zeige ich dir, wie du eine benutzerdefinierte Pool-Karte in Home Assistant erstellst. Dabei nutzen wir die Floorplan Card, um eine SVG-Grafik deines Pools mit CSS-Animationen zu versehen und mit YAML-Konfigurationen zu steuern.​ Das kann aber genauso gut für alle anderen Kreiläufe ob Strom, Heizung, Strom usw. verwendet werden. Der Kreativtät sind fast keine Grenzen gesetzt.
