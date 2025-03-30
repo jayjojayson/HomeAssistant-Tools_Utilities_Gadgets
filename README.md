@@ -9,4 +9,4 @@ Mal schauen was mir noch so einfällt. ☺️
 
 ### 📱 [Custom Cards für HA](https://github.com/jayjojayson/HomeAssistant-Tools_Utilities_Gadgets/tree/main/Dashboard-Custom-Cards)
 
-### 📑 [Blueprint List](https://github.com/jayjojayson/HomeAssistant-Tools_Utilities_Gadgets/tree/main/Blueprints)
+### 📘 [Blueprint List](https://github.com/jayjojayson/HomeAssistant-Tools_Utilities_Gadgets/tree/main/Blueprints)
