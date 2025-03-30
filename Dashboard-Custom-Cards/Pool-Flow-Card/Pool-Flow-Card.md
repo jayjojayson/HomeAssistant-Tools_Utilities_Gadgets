@@ -432,7 +432,7 @@ config:
 ```
 📌 Die CSS-Klassen sorgen dafür, dass das entsprechende SVG-Element eine fließende Animation erhält, die bei mir den Wasserfluss simuliert.​
 
-**Schritt 5: Integration der Pool-Karte in das Home Assistant Dashboard
+### Schritt 5: Integration der Pool-Karte in das Home Assistant Dashboard
 
 📌 Füge die `pool-card.yaml` zu deinem Dashboard hinzu:​
 
