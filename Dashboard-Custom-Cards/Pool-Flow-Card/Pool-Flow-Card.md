@@ -42,6 +42,30 @@ Hi, heute möchte ich mal die ha-floorplan-card vorstellen, mit der man auch wun
 5. Wiederhole diesen Vorgang für alle relevanten Elemente.​
 6. Speichere die Änderungen und schließe Inkscape.​
 
+
+
+<details>
+  <summary> 📌 <b>Ausführliche Anleitung - Bearbeiten der SVG-Datei mit Inkscape</b></summary>       
+    
+   Um die interaktiven Elemente in deiner SVG-Datei später in Home Assistant gezielt ansprechen zu können, ist es notwendig, ihnen eindeutige IDs zuzuweisen. Dies ermöglicht es, spezifische Komponenten wie Pumpen oder Ventile individuell zu steuern oder zu visualisieren. Hier ist eine Schritt-für-Schritt-Anleitung, wie du dies mit Inkscape umsetzen kannst:​
+   
+   1. **Öffnen der SVG-Datei:**
+     * Starte Inkscape auf deinem Computer.​
+     * Lade die SVG-Datei deines Pool-Layouts, indem du auf **"Datei" > "Öffnen"** gehst und die entsprechende Datei auswählst.​
+   2. **Auswählen des zu bearbeitenden Objekts:**
+     * Klicke auf das Objekt, dem du eine ID zuweisen möchtest, um es auszuwählen.​
+   3. **Zuweisen einer eindeutigen ID:**
+     * Gehe im Menü auf **"Objekt" > "Objekteigenschaften"**.​
+     * Im sich öffnenden Dialogfeld findest du das Feld **"ID"**. Gib hier einen eindeutigen Namen für das Objekt ein, der dessen Funktion oder Position beschreibt, z.B. `pool_pumpe` für die Poolpumpe oder `ventil_einlass` für das Einlassventil.​
+     * Bestätige die Eingabe, indem du auf **"Setzen"** klickst.​
+   4. **Wiederholen für weitere Objekte:**
+     * Wiederhole die Schritte 2 und 3 für alle weiteren Objekte in deiner SVG-Datei, denen du IDs zuweisen möchtest.​
+   5. **Speichern der Änderungen:**
+     * Nachdem du allen relevanten Objekten eindeutige IDs zugewiesen hast, speichere die Datei über **"Datei" > "Speichern"**.​
+   
+   Durch das Zuweisen eindeutiger IDs zu den Objekten in deiner SVG-Datei legst du die Grundlage dafür, diese später in Home Assistant mittels CSS und YAML gezielt anzusprechen und zu steuern. Dies ermöglicht eine interaktive und dynamische Darstellung deines Pools im Home Assistant Dashboard.
+</details>
+
 ### Schritt 4: Konfiguration der `pool-card.yaml`
 
 📌 Die `pool-card.yaml` definiert die Interaktionen zwischen den Home Assistant Entitäten und den SVG-Elementen. Hier mein Beispiel-Code:
