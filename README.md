@@ -7,6 +7,6 @@ Mal schauen was mir noch so einfällt. ☺️
 ## 📂 Struktur
 ### ❤️ [Emoji Cheat Sheet Table](https://github.com/jayjojayson/HomeAssistant-Tools_Utilities_Gadgets/blob/main/Emojis-List.md)
 
-###  📰 [Custom Cards für HA](https://github.com/jayjojayson/HomeAssistant-Tools_Utilities_Gadgets/tree/main/Dashboard-Custom-Cards)
+### 📱 [Custom Cards für HA](https://github.com/jayjojayson/HomeAssistant-Tools_Utilities_Gadgets/tree/main/Dashboard-Custom-Cards)
 
 ### 📑 [Blueprint List](https://github.com/jayjojayson/HomeAssistant-Tools_Utilities_Gadgets/tree/main/Blueprints)
