@@ -246,7 +246,7 @@ config:
             class: static-value
 ```
 
-### Schritt 4: Erstellung der `pool-card.css`
+### Schritt 5: Erstellung der `pool-card.css`
 
 📌 Die `pool-card.css` enthält die Stildefinitionen und Animationen für die SVG-Grafik. Meine CSS-Datei sieht so aus.​
 
@@ -456,7 +456,7 @@ config:
 ```
 📌 Die CSS-Klassen sorgen dafür, dass das entsprechende SVG-Element eine fließende Animation erhält, die bei mir den Wasserfluss simuliert.​
 
-### Schritt 5: Integration der Pool-Karte in das Home Assistant Dashboard
+### Schritt 6: Integration der Pool-Karte in das Home Assistant Dashboard
 
 📌 Füge die `pool-card.yaml` zu deinem Dashboard hinzu:​
 
