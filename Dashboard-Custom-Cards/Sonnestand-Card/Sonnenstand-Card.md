@@ -57,7 +57,7 @@ Ich weiß, es gibt auch diese Zenit-Card, aber wer es kompakt und im gleichen St
             {% elif azimuth < 255 %}
               /local/sonne/morgen.png
             {% else %}
-              /local/sonne/abend.png'
+              /local/sonne/abend.png
             {% endif %}
           {% else %}
             /local/sonne/unterHorizont.png
