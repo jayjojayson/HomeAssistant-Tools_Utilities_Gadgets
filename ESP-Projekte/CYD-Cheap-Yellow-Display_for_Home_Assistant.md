@@ -1,4 +1,4 @@
-# 🌅 Custom Display für Home Assistant
+# 📱 Custom Display für Home Assistant
 
 ## CYD Display für Home Assistant mit ESP Home
 
