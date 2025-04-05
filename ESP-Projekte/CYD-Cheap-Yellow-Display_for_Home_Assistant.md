@@ -6,11 +6,11 @@
 
 Ich habe das mal versucht umzusetzen nach dieser Anleitung: [Integrar la Cheap Yellow Display en HA - Aguacatec ](https://aguacatec.es/integrar-la-cheap-yellow-display-en-ha/)
 
-![c71c068e2deadd51a38db1b73ce550342e4961b9|346x500, 75%](upload://spp3NgXCbvpl3ce9Hl03XaVMNER.jpeg)
+![image](https://github.com/user-attachments/assets/d31426ff-d76e-47fa-ac30-de4a6e15ec55)
 
-Das hat auch gut funktioniert, aber zum Anfang gab es Schwierigkeiten mit der Darstellung des Displays. Das ist halt immer abhängig vom genutzten board. Nach etwas ausprobieren und lesen habe ich für mein Display die Settings für model und rotation im Code wie folgt geändert:
+📌 Das hat auch gut funktioniert, aber zum Anfang gab es Schwierigkeiten mit der Darstellung des Displays. Das ist halt immer abhängig vom genutzten board. Nach etwas ausprobieren und lesen habe ich für mein Display die Settings für model und rotation im Code wie folgt geändert:
 
-```
+```yaml
 display:
   - platform: ili9xxx
     id: esp_display
@@ -25,11 +25,11 @@ display:
 
 Nun wurde auch der Code korrekt auf dem Display dargestellt. Also habe ich begonnen das Setup des Displays selber vorzunehmen und meine Entitäten aus HA entsprechend umgeschrieben bzw. ergänzt.
 
-![4f74d116a0ff41f381115005db661f9b1ec43454|690x175, 75%](upload://bkTZVMam0LEDzu5IIbtyttcoKNu.jpeg)
+![image](https://github.com/user-attachments/assets/d6e1fc55-cb24-4d0f-bf49-14cb021177cb)
 
-Dabei ist mir auch aufgefallen, dass die letzten beiden Button auf der zweiten Seite von der Anordnung her nicht stimmen und nur in den Ecken gedrückt werden konnten. Das habe ich entsprechend korrigiert. Hier meine quick and dirty angepasste Version:
+📌 Dabei ist mir auch aufgefallen, dass die letzten beiden Button auf der zweiten Seite von der Anordnung her nicht stimmen und nur in den Ecken gedrückt werden konnten. Das habe ich entsprechend korrigiert. Hier meine quick and dirty angepasste Version:
 
-```
+```yaml
 esphome:
   name: cyd
   friendly_name: CYD Schlafzimmer
@@ -564,13 +564,11 @@ display:
 
 Zum Abschluß brauchte ich natürlich noch ein passendes Gehäuse. Ich habe den Ständer selber gezeichnet und ein fertiges Gehäuse dazu ausgedruckt. Das Gehäuse ist auf meiner Druckseite mit verlinkt.
 
-![|32x32](upload://9PEdkpLJffi4CzAOgSsGQwjRnYM.png)[Printables.com](https://www.printables.com/model/1058652-esp32-28-inch-cyd-display-stand)
-
-![|690x362](upload://5jchtuXXKPlyrYbgOjUaUwr9NR4.jpeg)
+![image](https://github.com/user-attachments/assets/9f2a5c66-43f8-4f06-9fd0-677b60147c6e)[Printables.com](https://www.printables.com/model/1058652-esp32-28-inch-cyd-display-stand)
 
 ### [ESP32 2.8 inch CYD Display Stand by Jay | Download free STL model |... ](https://www.printables.com/model/1058652-esp32-28-inch-cyd-display-stand)
 
 Display Stand for ESP32-2432S028 | Download free 3D printable STL models
 
 Jetzt steht das Display auf meinem Nachttisch und zeigt mir die wichtigsten Daten an. Auf Seite zwei habe ich die Hauptlichter hinterlegt.
-Vielleicht hat ja der ein oder andere Interesse bzw. Lust so etwas zu basteln. :slight_smile:reagieren.
+Vielleicht hat ja der ein oder andere Interesse bzw. Lust so etwas zu basteln. :slight_smile:
