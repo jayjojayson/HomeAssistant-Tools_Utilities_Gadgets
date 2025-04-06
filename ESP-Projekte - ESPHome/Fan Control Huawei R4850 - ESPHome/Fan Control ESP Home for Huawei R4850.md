@@ -2,7 +2,8 @@
 
 ## Fan Control with ESP Home for Huawei R4850 for Home Assistant
 
-📌 Das ist eine einfach Lüftersteuerung für das Huawei R4850, kann aber natürlich auch für andere Projekte genutzt werden. Es wird in ESPHome ein Gerät angelegt und das lässt hinterher die Steurung (on/off) in Home Assistant zu.
+📌 Das ist eine einfach Lüftersteuerung für das Huawei R4850, kann aber natürlich auch für andere Projekte genutzt werden. Es wird in ESPHome ein Gerät angelegt und das lässt hinterher die Steurung (on/off) in Home Assistant zu. 
+Den Schaltplan findest du im beigefügtem Bild Schaltplan.png (liegt im Ornder)
 
 ## Voraussetzungen
 
