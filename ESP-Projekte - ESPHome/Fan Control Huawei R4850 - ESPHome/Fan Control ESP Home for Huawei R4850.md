@@ -8,8 +8,9 @@ Den Schaltplan findest ihr im beigefügtem Bild Schaltplan.png (liegt im Ornder)
 ## Voraussetzungen
 
 1. Home Assistant mit ESPHome Add-on installiert 
-2. ESP8266-Gerät (z. B. ESP-01, NodeMCU, Wemos D1 mini) 
-3. USB-Kabel zum Flashen 
+2. ESP8266-Gerät (z. B. ESP-01, NodeMCU, Wemos D1 mini)
+3. H-Bridge (Motorsteuerung)
+4. USB-Kabel zum Flashen 
 
 
 ## 📁 Schritt 1: YAML-Code in ESPHome einfügen
