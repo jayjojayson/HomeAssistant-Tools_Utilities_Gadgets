@@ -35,7 +35,7 @@ Heute möchte ich mal die ha-floorplan-card vorstellen, mit der man auch wunderb
 3. Lege die folgenden Dateien in diesem Ordner ab:​
   * `pool-card.svg`: Deine SVG-Grafik des Pools.​
   * `pool-card.css`: Die CSS-Datei für Animationen und Styling.​
-  * `pool-card.yaml`: Die YAML-Konfigurationsdatei für die Floorplan Card.​
+  * `pool-card.yaml`: Die YAML-Konfiguration ist nur für das Dashboard, muss nicht kopiert werden.​
 
 ### Schritt 3: Bearbeiten der SVG-Datei mit Inkscape
 
