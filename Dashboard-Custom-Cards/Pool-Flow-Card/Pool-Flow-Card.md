@@ -22,11 +22,10 @@ Heute möchte ich mal die ha-floorplan-card vorstellen, mit der man auch wunderb
 
 📌 Um die Floorplan Card zu nutzen, musst du sie zunächst über den Home Assistant Community Store (HACS) installieren:​
 
-1. Öffne das HACS-Panel in deinem Home Assistant.​
-2. Klicke auf "Frontend".​
-3. Suche nach "Floorplan Card".​
-4. Wähle die Karte aus und klicke auf "Installieren".​
-5. Starte Home Assistant neu, um die Installation abzuschließen.​
+1. Öffne HACS in deinem Home Assistant.​
+2. Suche nach "Floorplan Card".​
+3. Wähle die Karte aus und klicke auf "Installieren".​
+4. Starte Home Assistant neu, um die Installation abzuschließen.​
 
 ### Schritt 2: Erstellen der Verzeichnisstruktur und Ablegen der Dateien
 
