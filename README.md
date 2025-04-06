@@ -9,6 +9,6 @@ Mal schauen was mir noch so einfällt. ☺️
 
 ### 📱 [Custom Cards für HA](https://github.com/jayjojayson/HomeAssistant-Tools_Utilities_Gadgets/tree/main/Dashboard-Custom-Cards)
 
-### 📟 [ESP Projekte für HA](https://github.com/jayjojayson/HomeAssistant-Tools_Utilities_Gadgets/tree/main/ESP-Projekte)
+### 📟 [ESP Projekte für HA](https://github.com/jayjojayson/HomeAssistant-Tools_Utilities_Gadgets/tree/main/ESP-Projekte%20-%20ESPHome)
 
 ### 📘 [Blueprint List](https://github.com/jayjojayson/HomeAssistant-Tools_Utilities_Gadgets/tree/main/Blueprints)
