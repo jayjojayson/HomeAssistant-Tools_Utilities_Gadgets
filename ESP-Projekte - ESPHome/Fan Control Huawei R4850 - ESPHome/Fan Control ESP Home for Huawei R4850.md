@@ -1,9 +1,9 @@
-# 𖣘 Fan Control ESP Home for Huawei R4850
+# 𖣘 Fan Control with ESPHome for Huawei R4850
 
-## Fan Control with ESP Home for Huawei R4850 for Home Assistant
+## Fan Control with ESPHome for Huawei R4850 and supoortf for Home Assistant
 
-📌 Das ist eine einfach Lüftersteuerung für das Huawei R4850, kann aber natürlich auch für andere Projekte genutzt werden. Es wird in ESPHome ein Gerät angelegt und das lässt hinterher die Steurung (on/off) in Home Assistant zu. 
-Den Schaltplan findest du im beigefügtem Bild Schaltplan.png (liegt im Ornder)
+📌 Das ist eine einfache Lüftersteuerung für das Huawei R4850 Netzteil (Charger), kann aber natürlich auch für andere Projekte genutzt werden. Es wird in ESPHome ein Gerät angelegt und das lässt hinterher die Steurung (on/off) in Home Assistant zu. 
+Den Schaltplan findest ihr im beigefügtem Bild Schaltplan.png (liegt im Ornder). Ich habe zwei Lüfter auf Alurippen geschraubt und die auf dem Netzteil verklebt, so dass eine direkte Verbindung zwischen Kühlrippen und Netzteiloberseite besteht.
 
 ## Voraussetzungen
 
