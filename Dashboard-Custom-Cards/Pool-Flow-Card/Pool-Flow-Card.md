@@ -404,58 +404,6 @@ config:
     transform: scaleY(100%);
   }
 }
-
-.pumping {
-  fill: #3e6dca !important;
-  color: #3e6dca !important;
-  animation-name: pumping;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  transform-origin: 50% 50%;
-  transform-box: fill-box;
-}
-
-@keyframes pump{
-  0% {
-    transform: translate(0px,0px);
-  }
-
-  50% {
-    transform: translate(0px, -5px);
-  }
-  
-  100% {
-    transform: translate(0px, 0px);
-  }
-}
-
-.heating {
-  animation: heat;
-  animation-name: heat;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-  transform-box: fill-box;
-  transform-origin: 0% 0%;
-}
-
-@keyframes heat{
-  0% {
-    fill: #507eec;
-    transform: scaleX(100%);
-  }
-
-  50% {
-    fill: #ef7e87;
-    transform: scaleX(50%);
-  }
-  
-  100% {
-    fill: #507eec;
-    transform: scaleX(100%);
-  }
-}
 ```
 📌 Die CSS-Klassen sorgen dafür, dass das entsprechende SVG-Element eine fließende Animation erhält, die bei mir den Wasserfluss simuliert.​
 
