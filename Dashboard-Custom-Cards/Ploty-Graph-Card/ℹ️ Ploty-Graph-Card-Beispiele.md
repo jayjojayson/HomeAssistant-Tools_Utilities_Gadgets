@@ -527,7 +527,9 @@ entities:
     line:
       shape: spline
       color: green
-      smoothing: 0.6
+    filters:
+      - exponential_moving_average:
+          alpha: 0.05
   - entity: sensor.total_power_nur_verbrauch
     name: Netzbezug
     yaxis: y1
@@ -535,14 +537,18 @@ entities:
     line:
       shape: spline
       color: orange
-      smoothing: 0.6
+    filters:
+      - exponential_moving_average:
+          alpha: 0.05
   - entity: sensor.solar_einspeisung_normiert_positiver_wert
     name: Netzeinspeisung
     yaxis: y1
     line:
       shape: spline
       color: red
-      smoothing: 0.6
+    filters:
+      - exponential_moving_average:
+          alpha: 0.05
   - entity: sensor.acpowerzubatterie_energy_power
     name: Batterieladung
     yaxis: y1
@@ -550,6 +556,9 @@ entities:
     line:
       shape: spline
       color: "#AAE1FC"
+    filters:
+      - exponential_moving_average:
+          alpha: 0.05
   - entity: sensor.solcast_pv_forecast_aktuelle_leistung
     name: Vorhersage
     yaxis: y2
@@ -573,8 +582,11 @@ layout:
     r: 40
 grid_options:
   columns: full
-
 ```
+Die Linien können auch geglättet werden. Dazu einfach einen Filter setzten. Der Filter ist im Beispiel schon gesetzt. Wollt ihr ihn nicht haben, einfach herauslöschen. Kleinere Zahlen bedeuten größere Glättung.
+
+![image](https://github.com/user-attachments/assets/1863f1b2-c398-4932-9f2e-f1798001dcff)
+
 
 📌 Und zum Schluss noch ein Beispiel für die Summierung über die Monate hinweg.
 
