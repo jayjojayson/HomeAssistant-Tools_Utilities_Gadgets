@@ -154,7 +154,7 @@ Modernes, kompaktes und aussagekräftiges Balkendiagramm, das zeigt:
 
 📌 einfache Darstellung sehr ähnlich zum Energie-Dashboard
 
-![image|690x194, 75%](upload://isOoKmC3bLeoi3C545kycEYxl4y.png)
+![image](https://github.com/user-attachments/assets/7e8db080-f568-45bd-b385-2f7fe67e8af1)
 
 
 ```yaml
@@ -214,7 +214,7 @@ title: Aufteilung
 
 📌 Das selbe Bespiel etwas erweitert und sortierter. Zusätzlich Zeitauswahl hinzugefügt.
 
-![image|690x322, 75%](upload://bdtkr9iauSOjxsoH7qt8NrOYv5Y.png)
+![image](https://github.com/user-attachments/assets/986a78fb-7133-49fb-9d9c-d8825094723f)
 
 
 ```yaml
@@ -300,7 +300,7 @@ grid_options:
 
 📌 Nun kommt das worauf es mir persönlich ankommt. Hier findet eine Aufteilung statt. Man sieht die Solarprognose für den laufenden Tag, im zweiten Balken wie sich der Strom aus Netzbezug, Solar und Batterie zusammensetzt und im dritten Balken wie der Verbrauch sich aufteilt, in Netzeinspeisung, Batterieladung und restlicher Verbrauch.
 
-![image|690x268, 100%](upload://7022NwbxtLRrqeEp2jQwI15J7hz.png)
+![image](https://github.com/user-attachments/assets/45d6df8c-2eb7-4714-9a0d-964a20d24932)
 
 
 ```yaml
@@ -497,7 +497,7 @@ Hieran habe ich ewig gesessen, aber es geht jetzt wie gewünscht.
 
 📌 Zur Ergänzung noch ein Liniendiagramm mit Aufteilung des aktuellen Strombezuges inkl. Batterieladung und Vorhersage. Das Diagramm ist immer auf einen Tag fixiert und baut sich über den Tag hinweg auf.
 
-![image|690x198, 100%](upload://aCP1JiJT2HQvBQrsfBg7EMTS19q.png)
+![image](https://github.com/user-attachments/assets/1a6af161-45a9-421f-8b0f-5b012ea0ec20)
 
 ```yaml
 type: custom:plotly-graph
@@ -578,7 +578,7 @@ grid_options:
 
 📌 Und zum Schluss noch ein Beispiel für die Summierung über die Monate hinweg.
 
-![image|690x269, 75%](upload://xpqIVxhTmJWFdJGokIudGCHrN7m.png)
+![image](https://github.com/user-attachments/assets/7c2ff69d-bfc4-4f94-a7fd-3589c352bf3e)
 
 
 ```yaml
@@ -673,6 +673,3 @@ grid_options:
   columns: full
 
 ```
----
-
-***Was habt ihr für ploty-cards realisiert bzw. im Einsatz? Teilt gerne eure Ergebnisse hier, so können wir eine kleine Übersicht sammeln und für alle bereitstellen. :)***
