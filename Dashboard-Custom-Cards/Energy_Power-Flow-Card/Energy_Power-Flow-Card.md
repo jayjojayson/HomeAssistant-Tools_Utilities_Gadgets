@@ -2,6 +2,9 @@
 
 Dieses Projekt zeigt, wie man mit einer SVG-Grafik und der `floorplan-card` Energieflüsse wie Solar, Batterie, Netz und Hausverbrauch visuell und dynamisch darstellt. Letztendlich müsst ihr im Beispielcode zur Card nur eure Entitäten/Sensoren austauschen und die Card sollte funktionieren. :)
 
+![Screenshot 2025-05-20 072604](https://github.com/user-attachments/assets/09229cec-0606-4b4d-8465-c369b5a508e0)
+
+![Screenshot 2025-05-20 185051](https://github.com/user-attachments/assets/abc380e4-228a-4201-90b6-ceec2d2ee9a2)
 
 ### 🔧 Voraussetzungen
 
