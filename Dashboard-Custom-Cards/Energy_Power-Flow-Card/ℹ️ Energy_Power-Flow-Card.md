@@ -4,6 +4,9 @@ Dieses Projekt zeigt, wie man mit einer SVG-Grafik und der `floorplan-card` Ener
 
 ![Screenshot 2025-05-20 072604](https://github.com/user-attachments/assets/09229cec-0606-4b4d-8465-c369b5a508e0)
 
+![Screenshot 2025-05-24 162351](https://github.com/user-attachments/assets/a6c1436b-34d6-4209-959b-38cd0eca0c66)
+
+
 ![Screenshot 2025-05-20 185051](https://github.com/user-attachments/assets/abc380e4-228a-4201-90b6-ceec2d2ee9a2)
 
 ### 🔧 Voraussetzungen
