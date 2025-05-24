@@ -1,6 +1,6 @@
 ## 🔋 Energiefluss-Visualisierung mit SVG + Floorplan-Card (Home Assistant)
 
-Dieses Projekt zeigt, wie man mit einer SVG-Grafik und der `floorplan-card` Energieflüsse wie Solar, Batterie, Netz und Hausverbrauch visuell und dynamisch darstellt. Letztendlich müsst ihr im Beispielcode zur Card nur eure Entitäten/Sensoren austauschen und die Card sollte funktionieren. :)
+Dieses Projekt zeigt, wie man mit einer SVG-Grafik und der `floorplan-card` Energieflüsse wie Solar, Batterie, Netz und Hausverbrauch visuell und dynamisch darstellt. Letztendlich müsst ihr im Beispielcode zur Card nur eure Entitäten/Sensoren austauschen und die Card sollte funktionieren. :) Für ausführliche Erklärungen, wie man die SVG erstellt und verknüpft schaut euch bitte die Pool-Flow-Card an. Dort habe ich alles ausführlich erklärt.
 
 ![Screenshot 2025-05-20 072604](https://github.com/user-attachments/assets/09229cec-0606-4b4d-8465-c369b5a508e0)
 
@@ -15,37 +15,6 @@ Dieses Projekt zeigt, wie man mit einer SVG-Grafik und der `floorplan-card` Ener
 * `floorplan-card` Custom Card installiert
 * Sensoren mit täglichen Energie-Werten
 * CSS-Datei (energy-flow-card.css) zur dynamischen Gestaltung
-
-Die meisten werden keine Sensoren für den realen Solarverbrauch (abzüglich Einspeisung und Batterieladung) haben. Genauso beim Verbrauch, hier wird der Netzbezug plus Batterie plus Erzeugung (erster Sensor) gerechnet, daher habe ich mir dafür zwei Sensoren angelegt. 
-
-```yaml
-# Verrechnung für Diagramm Verbrauch und Erzeugung
-- sensor:
-  - name: "Erzeugzung taglich nach Abzug Einspeisung"
-    unique_id: erzeugung_taglich_kWh
-    unit_of_measurement: "kWh"
-    state_class: total_increasing
-    device_class: energy
-    state: >
-      {% set solar = states('sensor.growatt_todaygenerateenergy') | float(0) %}
-      {% set batterie = states('sensor.acpowerzubatterie_energy_today') | float(0) %}
-      {% set einspeisung = states('sensor.solar_netzeinspeisung_kwh_taglich') | float(0) %}
-      {{ (solar - einspeisung - batterie) | round(2) }}
-- sensor:
-  - name: "Verbrauch taglich nach Abzug"
-    unique_id: verbrauch_taglich_kWh
-    unit_of_measurement: "kWh"
-    state_class: total_increasing
-    device_class: energy
-    state: >
-      {% set stromverbrauch = states('sensor.stromverbrauch_taglich') | float(0) %}
-      {% set batterie = states('sensor.acpowervonbatterie_energy_today') | float(0) %}
-      {% set erzeugung = states('sensor.erzeugzung_taglich_nach_abzug_einspeisung') | float(0) %}
-      {% set batterieent = states('sensor.acpowerzubatterie_energy_today') | float(0) %}
-      {% set einspeisung = states('sensor.solar_netzeinspeisung_kwh_taglich') | float(0) %}
-      {{ (stromverbrauch + batterie + erzeugung - einspeisung - batterieent) | round(2) }}
-
-```
 
 ---
 
@@ -395,18 +364,11 @@ Die SVG-Grafik wird mit CSS verknüpft, um je nach Entity-Zustand Animationen od
 ```yaml
 - type: 'custom:floorplan-card'
   config:
-    image: /local/energy-flow.svg
+    image: /local/energy-flow-small.svg
     stylesheet: /local/energy-flow-card.css
     defaults:
       tap_action:
         action: more-info
-    rules:
-      - entity: sensor.battery_direction
-        state: charging
-        class: batteriein   # Startet Ladeanimation
-      - entity: sensor.solar_power
-        state: '> 100'
-        class: solarin      # Zeigt Solarstromfluss
 ```
 
 ---
