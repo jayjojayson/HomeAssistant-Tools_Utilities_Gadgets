@@ -22,7 +22,7 @@ Für ausführliche Erklärungen, wie man die SVG erstellt und verknüpft schaut 
 
 ### Aufbau der Card im Detail
 
-Ihr müsst einfach in der Card eure Entitäten eintragen und könnt im Anschluss die Card nutzen. Alle Animationen und Grenzwerte ich habe soweit eingestellt. Ihr könnt sie natürlich anpassen, aber die Card sollte auf Anhieb funktionieren. Im wwww Ordner legt ihr bitte noch einen Unterordner an z.B. Energy_Power-Flow-Card und darin speichert/kopiert ihr die css-Datei und das SVG(Bild). Die Card wird im Dashboard erstellt und der Code sieht wie folgt aus.
+Ihr müsst einfach in der Card eure Entitäten eintragen und könnt im Anschluss die Card nutzen. Alle Animationen und Grenzwerte ich habe soweit eingestellt. Ihr könnt sie natürlich anpassen, aber die Card sollte auf Anhieb funktionieren. Im www Ordner legt ihr bitte noch einen Unterordner an z.B. Energy_Power-Flow-Card und darin speichert/kopiert ihr die css-Datei und das SVG(Bild). Die Card wird im Dashboard erstellt und der Code sieht wie folgt aus.
 
 ```yaml
 type: custom:floorplan-card
