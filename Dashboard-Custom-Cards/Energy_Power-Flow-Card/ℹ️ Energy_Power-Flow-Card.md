@@ -13,7 +13,7 @@ Dieses Projekt zeigt, wie man mit einer SVG-Grafik und der `floorplan-card` Ener
 * Sensoren mit täglichen Energie-Werten
 * CSS-Datei (energy-flow-card.css) zur dynamischen Gestaltung
 
-Die meisten werden keine Sensoren für den realen Solarverbrauch (abzüglich Einspeisung und Batterieladung) haben. Genauso beim Verbrauch, hier wird der Netzbezug plus Batterie plus Erzeugung (erster Sensor) gerechnet, daher habe ich mir dafür zwei Sensoren angelegt. (danke nochmal @dreckfresse für den Gedankenanstoß.) 
+Die meisten werden keine Sensoren für den realen Solarverbrauch (abzüglich Einspeisung und Batterieladung) haben. Genauso beim Verbrauch, hier wird der Netzbezug plus Batterie plus Erzeugung (erster Sensor) gerechnet, daher habe ich mir dafür zwei Sensoren angelegt. 
 
 ```yaml
 # Verrechnung für Diagramm Verbrauch und Erzeugung
@@ -431,14 +431,6 @@ Die CSS-Datei steuert Animationen und Sichtbarkeit innerhalb der SVG.
 ```css
 .entitystate-off {
   display: none !important;
-}
-```
-
-#### 🌈 Beispiel 3: Farbe ändern bei Batterie-Betrieb
-
-```css
-.hausin.batteriebetrieb {
-  fill: blue;
 }
 ```
 
