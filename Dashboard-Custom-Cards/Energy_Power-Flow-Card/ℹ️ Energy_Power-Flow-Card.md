@@ -83,7 +83,7 @@ config:
         action: call-service
         service: floorplan.style_set
         service_data: |
-          ${parseFloat(entity.state) > 100 ? 'display:block' : 'display:none'}
+          ${parseFloat(entity.state) > 97 ? 'display:block' : 'display:none'}
     - element: batterie80
       entity: sensor.batterie_ladezustand
       state_action:
@@ -131,12 +131,61 @@ config:
       state_action:
         - service: floorplan.class_set
           service_data: >-
-            ${(entity.state !== undefined && parseFloat(entity.state) > 10) ?
+            ${(entity.state !== undefined && parseFloat(entity.state) > 30) ?
             "batteriein" : ""}
+        - service: floorplan.style_set
+          service_data: >-
+            ${(entity.state !== undefined && parseFloat(entity.state) > 30) ?
+            "display:block" : "display:none"}
+    - element: batterieoutani
+      entity: sensor.acpowervonbatterie_energy_power
+      state_action:
+        - service: floorplan.class_set
+          service_data: >-
+            ${(entity.state !== undefined && parseFloat(entity.state) > 10) ?
+            "hausin" : ""}
         - service: floorplan.style_set
           service_data: >-
             ${(entity.state !== undefined && parseFloat(entity.state) > 10) ?
             "display:block" : "display:none"}
+    - element: solaroutani
+      entities:
+        - sensor.total_solar_power_kombiniert
+        - sensor.total_power_kombiniert
+      state_action:
+        - service: floorplan.class_set
+          service_data: |-
+            ${(
+              states['sensor.total_solar_power_kombiniert'].state !== undefined &&
+              states['sensor.total_power_kombiniert'].state !== undefined &&
+              parseFloat(states['sensor.total_solar_power_kombiniert'].state) >= parseFloat(states['sensor.total_power_kombiniert'].state)
+            ) ? "hausin" : ""}
+        - service: floorplan.style_set
+          service_data: |-
+            ${(
+              states['sensor.total_solar_power_kombiniert'].state !== undefined &&
+              states['sensor.total_power_kombiniert'].state !== undefined &&
+              parseFloat(states['sensor.total_solar_power_kombiniert'].state) >= parseFloat(states['sensor.total_power_kombiniert'].state)
+            ) ? "display:block" : "display:none"}
+    - element: hausin
+      entities:
+        - sensor.total_solar_power_kombiniert
+        - sensor.total_power_kombiniert
+      state_action:
+        - service: floorplan.class_set
+          service_data: |-
+            ${(
+              states['sensor.total_power_kombiniert'] &&
+              states['sensor.total_solar_power_kombiniert'] &&
+              parseFloat(states['sensor.total_power_kombiniert'].state) >= parseFloat(states['sensor.total_solar_power_kombiniert'].state)
+            ) ? "hausin" : ""}
+        - service: floorplan.style_set
+          service_data: |-
+            ${(
+              states['sensor.total_power_kombiniert'] &&
+              states['sensor.total_solar_power_kombiniert'] &&
+              parseFloat(states['sensor.total_power_kombiniert'].state) >= parseFloat(states['sensor.total_solar_power_kombiniert'].state)
+            ) ? "display:block" : "display:none"}
     - element: solarin
       entity: sensor.total_solar_power_kombiniert
       state_action:
@@ -160,26 +209,15 @@ config:
             ${(entity.state !== undefined && parseFloat(entity.state) > 10) ?
             "display:block" : "display:none"}
     - element: netzout
-      entity: sensor.solar_netzeinspeisung_kwh_taglich
+      entity: sensor.total_power
       state_action:
         - service: floorplan.class_set
           service_data: >-
-            ${(entity.state !== undefined && parseFloat(entity.state) > 10) ?
+            ${(entity.state !== undefined && parseFloat(entity.state) < 0) ?
             "netzout" : ""}
         - service: floorplan.style_set
           service_data: >-
-            ${(entity.state !== undefined && parseFloat(entity.state) > 10) ?
-            "display:block" : "display:none"}
-    - element: hausin
-      entity: sensor.total_power_kombiniert
-      state_action:
-        - service: floorplan.class_set
-          service_data: >-
-            ${(entity.state !== undefined && parseFloat(entity.state) > 10) ?
-            "hausin" : ""}
-        - service: floorplan.style_set
-          service_data: >-
-            ${(entity.state !== undefined && parseFloat(entity.state) > 10) ?
+            ${(entity.state !== undefined && parseFloat(entity.state) < 0) ?
             "display:block" : "display:none"}
     - element: hausin
       entity: sensor.acpowervonbatterie_energy_power
@@ -339,14 +377,6 @@ config:
         - service: floorplan.class_set
           service_data:
             class: static-value
-card_mod:
-  style: |
-    ha-card {
-      background: none !important;   
-      box-shadow: none !important;
-      border: none;
-    }
-
 ```
 
 ---
