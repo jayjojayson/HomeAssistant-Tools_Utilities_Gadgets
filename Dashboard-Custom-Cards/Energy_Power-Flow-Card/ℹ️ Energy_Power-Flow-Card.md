@@ -8,7 +8,7 @@ Für ausführliche Erklärungen, wie man die SVG erstellt und verknüpft schaut 
 
 ![Screenshot 2025-05-24 162351](https://github.com/user-attachments/assets/a6c1436b-34d6-4209-959b-38cd0eca0c66)
 
-![image](https://github.com/user-attachments/assets/c790ab04-005c-43c9-a2d8-91013cbb0911)
+![image](https://github.com/user-attachments/assets/a8033160-32fd-49a1-8ed4-d1380a388d57)
 
 ![image](https://github.com/user-attachments/assets/dc7ec224-3f8f-470c-a12f-0eb7dc276670)
 
