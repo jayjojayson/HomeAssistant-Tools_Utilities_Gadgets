@@ -247,6 +247,21 @@ config:
         - service: floorplan.class_set
           service_data:
             class: static-value
+    - element: batterieinwatt
+      entity: sensor.acpowerzubatterie_energy_power
+      state_action:
+        - service: floorplan.text_set
+          service_data: >-
+            ${(entity.state !== undefined && parseFloat(entity.state) > 30) ?
+            (Math.round(entity.state * 10) / 10).toString().replace(".", ",") +
+            " W" : ""}
+        - service: floorplan.style_set
+          service_data: >-
+            ${(entity.state !== undefined && parseFloat(entity.state) > 30) ?
+            'display:block' : 'display:none'}
+        - service: floorplan.class_set
+          service_data:
+            class: static-value
     - element: batterieout
       entity: sensor.acpowervonbatterie_energy_today
       state_action:
@@ -352,6 +367,13 @@ config:
         - service: floorplan.class_set
           service_data:
             class: static-value
+card_mod:
+  style: |
+    ha-card {
+      background: none !important;   
+      box-shadow: none !important;
+      border: none;
+    }
 ```
 
 ---
