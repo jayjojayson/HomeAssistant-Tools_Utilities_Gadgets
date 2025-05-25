@@ -9,12 +9,6 @@ config:
   image: /local/energy-flow-card/energy-flow-card-small.svg
   stylesheet: /local/energy-flow-card/energy-flow-card.css
   rules:
-    - element: test-fuer-lampe
-      entity: switch.wasserlauf_steckdose_1
-      state_action:
-        action: call-service
-        service: floorplan.class_set
-        service_data: entitystate-${entity.state}
     - element: soc
       entity: sensor.batterie_ladezustand
       state_action:
@@ -36,7 +30,7 @@ config:
         action: call-service
         service: floorplan.style_set
         service_data: |
-          ${parseFloat(entity.state) > 100 ? 'display:block' : 'display:none'}
+          ${parseFloat(entity.state) > 97 ? 'display:block' : 'display:none'}
     - element: batterie80
       entity: sensor.batterie_ladezustand
       state_action:
@@ -64,43 +58,122 @@ config:
         action: call-service
         service: floorplan.style_set
         service_data: |
-          ${parseFloat(entity.state) = 1 ? 'display:block' : 'display:none'}
+          ${parseFloat(entity.state) > 1 ? 'display:block' : 'display:none'}
+    - element: dreieckbatteriein
+      entity: sensor.acpowerzubatterie_energy_power
+      state_action:
+        - service: floorplan.style_set
+          service_data: >-
+            ${(entity.state !== undefined && parseFloat(entity.state) > 30) ?
+            'display:block' : 'display:none'}
+    - element: dreieckbatterieout
+      entity: sensor.acpowervonbatterie_energy_power
+      state_action:
+        - service: floorplan.style_set
+          service_data: >-
+            ${(entity.state !== undefined && parseFloat(entity.state) > 0.1) ?
+            'opacity:1' : 'opacity:0'}
     - element: batteriein
       entity: sensor.acpowerzubatterie_energy_power
       state_action:
-        action: call-service
-        service: floorplan.class_set
-        service_data: "${(entity.state > \"10\") ? \"batteriein\" : \"\"}"
-    - element: rad
-      entity: sensor.total_power
+        - service: floorplan.class_set
+          service_data: >-
+            ${(entity.state !== undefined && parseFloat(entity.state) > 30) ?
+            "batteriein" : ""}
+        - service: floorplan.style_set
+          service_data: >-
+            ${(entity.state !== undefined && parseFloat(entity.state) > 30) ?
+            "display:block" : "display:none"}
+    - element: batterieoutani
+      entity: sensor.acpowervonbatterie_energy_power
       state_action:
-        action: call-service
-        service: floorplan.class_set
-        service_data: "${(entity.state > \"10\") ? \"rad\" : \"\"}"
+        - service: floorplan.class_set
+          service_data: >-
+            ${(entity.state !== undefined && parseFloat(entity.state) > 10) ?
+            "hausin" : ""}
+        - service: floorplan.style_set
+          service_data: >-
+            ${(entity.state !== undefined && parseFloat(entity.state) > 10) ?
+            "display:block" : "display:none"}
+    - element: solaroutani
+      entities:
+        - sensor.total_solar_power_kombiniert
+        - sensor.total_power_kombiniert
+      state_action:
+        - service: floorplan.class_set
+          service_data: |-
+            ${(
+              states['sensor.total_solar_power_kombiniert'].state !== undefined &&
+              states['sensor.total_power_kombiniert'].state !== undefined &&
+              parseFloat(states['sensor.total_solar_power_kombiniert'].state) >= parseFloat(states['sensor.total_power_kombiniert'].state)
+            ) ? "hausin" : ""}
+        - service: floorplan.style_set
+          service_data: |-
+            ${(
+              states['sensor.total_solar_power_kombiniert'].state !== undefined &&
+              states['sensor.total_power_kombiniert'].state !== undefined &&
+              parseFloat(states['sensor.total_solar_power_kombiniert'].state) >= parseFloat(states['sensor.total_power_kombiniert'].state)
+            ) ? "display:block" : "display:none"}
+    - element: hausin
+      entities:
+        - sensor.total_solar_power_kombiniert
+        - sensor.total_power_kombiniert
+      state_action:
+        - service: floorplan.class_set
+          service_data: |-
+            ${(
+              states['sensor.total_power_kombiniert'] &&
+              states['sensor.total_solar_power_kombiniert'] &&
+              parseFloat(states['sensor.total_power_kombiniert'].state) >= parseFloat(states['sensor.total_solar_power_kombiniert'].state)
+            ) ? "hausin" : ""}
+        - service: floorplan.style_set
+          service_data: |-
+            ${(
+              states['sensor.total_power_kombiniert'] &&
+              states['sensor.total_solar_power_kombiniert'] &&
+              parseFloat(states['sensor.total_power_kombiniert'].state) >= parseFloat(states['sensor.total_solar_power_kombiniert'].state)
+            ) ? "display:block" : "display:none"}
     - element: solarin
       entity: sensor.total_solar_power_kombiniert
       state_action:
-        action: call-service
-        service: floorplan.class_set
-        service_data: "${(entity.state > \"10\") ? \"solarin\" : \"\"}"
+        - service: floorplan.class_set
+          service_data: >-
+            ${(entity.state !== undefined && parseFloat(entity.state) > 10) ?
+            "solarin" : ""}
+        - service: floorplan.style_set
+          service_data: >-
+            ${(entity.state !== undefined && parseFloat(entity.state) > 10) ?
+            "display:block" : "display:none"}
     - element: netzin
       entity: sensor.total_power
       state_action:
-        action: call-service
-        service: floorplan.class_set
-        service_data: "${(entity.state > \"10\") ? \"netzin\" : \"\"}"
+        - service: floorplan.class_set
+          service_data: >-
+            ${(entity.state !== undefined && parseFloat(entity.state) > 10) ?
+            "netzin" : ""}
+        - service: floorplan.style_set
+          service_data: >-
+            ${(entity.state !== undefined && parseFloat(entity.state) > 10) ?
+            "display:block" : "display:none"}
     - element: netzout
-      entity: sensor.solar_netzeinspeisung_kwh_taglich
+      entity: sensor.total_power
       state_action:
-        action: call-service
-        service: floorplan.class_set
-        service_data: "${(entity.state > \"10\") ? \"netzout\" : \"\"}"
+        - service: floorplan.class_set
+          service_data: >-
+            ${(entity.state !== undefined && parseFloat(entity.state) < 0) ?
+            "netzout" : ""}
+        - service: floorplan.style_set
+          service_data: >-
+            ${(entity.state !== undefined && parseFloat(entity.state) < 0) ?
+            "display:block" : "display:none"}
     - element: hausin
-      entity: sensor.total_power_kombiniert
+      entity: sensor.acpowervonbatterie_energy_power
       state_action:
         action: call-service
         service: floorplan.class_set
-        service_data: "${(entity.state > \"10\") ? \"hausin\" : \"\"}"
+        service_data: >-
+          ${(parseFloat(entity.state) > 0) ? 'hausin batteriebetrieb' :
+          'hausin'}    
     - element: solarleistung
       entity: sensor.erzeugzung_taglich_kombination_solaranlagen
       state_action:
@@ -136,9 +209,54 @@ config:
       state_action:
         - service: floorplan.text_set
           service_data: >-
-            ${(entity.state !== undefined && parseFloat(entity.state) > 0) ?
+            ${(entity.state !== undefined && parseFloat(entity.state) > 0.1) ?
             (Math.round(entity.state * 10) / 10).toString().replace(".", ",") +
             " kWh" : ""}
+        - service: floorplan.style_set
+          service_data: >-
+            ${(entity.state !== undefined && parseFloat(entity.state) > 0) ?
+            'display:block' : 'display:none'}
+        - service: floorplan.class_set
+          service_data:
+            class: static-value
+    - element: batterieinwatt
+      entity: sensor.acpowerzubatterie_energy_power
+      state_action:
+        - service: floorplan.text_set
+          service_data: >-
+            ${(entity.state !== undefined && parseFloat(entity.state) > 30) ?
+            (Math.round(entity.state * 10) / 10).toString().replace(".", ",") +
+            " W" : ""}
+        - service: floorplan.style_set
+          service_data: >-
+            ${(entity.state !== undefined && parseFloat(entity.state) > 30) ?
+            'display:block' : 'display:none'}
+        - service: floorplan.class_set
+          service_data:
+            class: static-value
+    - element: batterieout
+      entity: sensor.acpowervonbatterie_energy_today
+      state_action:
+        - service: floorplan.text_set
+          service_data: >-
+            ${(entity.state !== undefined && parseFloat(entity.state) > 0.1) ?
+            (Math.round(entity.state * 10) / 10).toString().replace(".", ",") +
+            " kWh" : ""}
+        - service: floorplan.style_set
+          service_data: >-
+            ${(entity.state !== undefined && parseFloat(entity.state) > 0) ?
+            'display:block' : 'display:none'}
+        - service: floorplan.class_set
+          service_data:
+            class: static-value
+    - element: batterieoutwatt
+      entity: sensor.acpowervonbatterie_energy_power
+      state_action:
+        - service: floorplan.text_set
+          service_data: >-
+            ${(entity.state !== undefined && parseFloat(entity.state) > 0) ?
+            (Math.round(entity.state * 10) / 10).toString().replace(".", ",") +
+            " W" : ""}
         - service: floorplan.style_set
           service_data: >-
             ${(entity.state !== undefined && parseFloat(entity.state) > 0) ?
@@ -211,7 +329,7 @@ config:
       state_action:
         - service: floorplan.text_set
           service_data: >-
-            ${(entity.state !== undefined && parseFloat(entity.state) > 0) ?
+            ${(entity.state !== undefined && parseFloat(entity.state) > 0.1) ?
             (Math.round(entity.state * 10) / 10).toString().replace(".", ",") +
             " kWh" : ""}
         - service: floorplan.style_set
