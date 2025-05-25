@@ -1,10 +1,16 @@
 ## 🔋 Energiefluss-Visualisierung mit SVG + Floorplan-Card (Home Assistant)
 
-Dieses Projekt zeigt, wie man mit einer SVG-Grafik und der `floorplan-card` Energieflüsse wie Solar, Batterie, Netz und Hausverbrauch visuell und dynamisch darstellt. Letztendlich müsst ihr im Beispielcode zur Card nur eure Entitäten/Sensoren austauschen und die Card sollte funktionieren. :)
+Dieses Projekt zeigt, wie man mit einer SVG-Grafik und der `floorplan-card` Energieflüsse wie Solar, Batterie, Netz und Hausverbrauch visuell und dynamisch darstellt. Letztendlich müsst ihr im Beispielcode zur Card nur eure Entitäten/Sensoren austauschen und die Card sollte funktionieren. :) 
+
+Für ausführliche Erklärungen, wie man die SVG erstellt und verknüpft schaut euch bitte die Pool-Flow-Card an. Dort habe ich alles genau erklärt.
 
 ![Screenshot 2025-05-20 072604](https://github.com/user-attachments/assets/09229cec-0606-4b4d-8465-c369b5a508e0)
 
-![Screenshot 2025-05-20 185051](https://github.com/user-attachments/assets/abc380e4-228a-4201-90b6-ceec2d2ee9a2)
+![Screenshot 2025-05-24 162351](https://github.com/user-attachments/assets/a6c1436b-34d6-4209-959b-38cd0eca0c66)
+
+![image](https://github.com/user-attachments/assets/a8033160-32fd-49a1-8ed4-d1380a388d57)
+
+![image](https://github.com/user-attachments/assets/dc7ec224-3f8f-470c-a12f-0eb7dc276670)
 
 ### 🔧 Voraussetzungen
 
@@ -13,42 +19,11 @@ Dieses Projekt zeigt, wie man mit einer SVG-Grafik und der `floorplan-card` Ener
 * Sensoren mit täglichen Energie-Werten
 * CSS-Datei (energy-flow-card.css) zur dynamischen Gestaltung
 
-Die meisten werden keine Sensoren für den realen Solarverbrauch (abzüglich Einspeisung und Batterieladung) haben. Genauso beim Verbrauch, hier wird der Netzbezug plus Batterie plus Erzeugung (erster Sensor) gerechnet, daher habe ich mir dafür zwei Sensoren angelegt. (danke nochmal @dreckfresse für den Gedankenanstoß.) 
-
-```yaml
-# Verrechnung für Diagramm Verbrauch und Erzeugung
-- sensor:
-  - name: "Erzeugzung taglich nach Abzug Einspeisung"
-    unique_id: erzeugung_taglich_kWh
-    unit_of_measurement: "kWh"
-    state_class: total_increasing
-    device_class: energy
-    state: >
-      {% set solar = states('sensor.growatt_todaygenerateenergy') | float(0) %}
-      {% set batterie = states('sensor.acpowerzubatterie_energy_today') | float(0) %}
-      {% set einspeisung = states('sensor.solar_netzeinspeisung_kwh_taglich') | float(0) %}
-      {{ (solar - einspeisung - batterie) | round(2) }}
-- sensor:
-  - name: "Verbrauch taglich nach Abzug"
-    unique_id: verbrauch_taglich_kWh
-    unit_of_measurement: "kWh"
-    state_class: total_increasing
-    device_class: energy
-    state: >
-      {% set stromverbrauch = states('sensor.stromverbrauch_taglich') | float(0) %}
-      {% set batterie = states('sensor.acpowervonbatterie_energy_today') | float(0) %}
-      {% set erzeugung = states('sensor.erzeugzung_taglich_nach_abzug_einspeisung') | float(0) %}
-      {% set batterieent = states('sensor.acpowerzubatterie_energy_today') | float(0) %}
-      {% set einspeisung = states('sensor.solar_netzeinspeisung_kwh_taglich') | float(0) %}
-      {{ (stromverbrauch + batterie + erzeugung - einspeisung - batterieent) | round(2) }}
-
-```
-
 ---
 
 ### Aufbau der Card im Detail
 
-Ihr müsst einfach in der Card eure Entitäten eintragen und könnt im Anschluss die Card nutzen. Alle Animationen und Grenzwerte ich habe soweit eingestellt. Ihr könnt sie natürlich anpassen, aber die Card sollte auf Anhieb funktionieren.
+Ihr müsst einfach in der Card eure Entitäten eintragen und könnt im Anschluss die Card nutzen. Alle Animationen und Grenzwerte ich habe soweit eingestellt. Ihr könnt sie natürlich anpassen, aber die Card sollte auf Anhieb funktionieren. Im www Ordner legt ihr bitte noch einen Unterordner an z.B. Energy_Power-Flow-Card und darin speichert/kopiert ihr die css-Datei und das SVG(Bild). Die Card wird im Dashboard erstellt und der Code sieht wie folgt aus.
 
 ```yaml
 type: custom:floorplan-card
@@ -392,18 +367,11 @@ Die SVG-Grafik wird mit CSS verknüpft, um je nach Entity-Zustand Animationen od
 ```yaml
 - type: 'custom:floorplan-card'
   config:
-    image: /local/energy-flow.svg
+    image: /local/energy-flow-small.svg
     stylesheet: /local/energy-flow-card.css
     defaults:
       tap_action:
         action: more-info
-    rules:
-      - entity: sensor.battery_direction
-        state: charging
-        class: batteriein   # Startet Ladeanimation
-      - entity: sensor.solar_power
-        state: '> 100'
-        class: solarin      # Zeigt Solarstromfluss
 ```
 
 ---
@@ -431,14 +399,6 @@ Die CSS-Datei steuert Animationen und Sichtbarkeit innerhalb der SVG.
 ```css
 .entitystate-off {
   display: none !important;
-}
-```
-
-#### 🌈 Beispiel 3: Farbe ändern bei Batterie-Betrieb
-
-```css
-.hausin.batteriebetrieb {
-  fill: blue;
 }
 ```
 
