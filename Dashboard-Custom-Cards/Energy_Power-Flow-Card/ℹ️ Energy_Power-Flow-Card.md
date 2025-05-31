@@ -1,4 +1,4 @@
-## 🔋 Energiefluss-Visualisierung mit SVG + Floorplan-Card (Home Assistant)
+## ⚡ Energiefluss-Visualisierung mit SVG + Floorplan-Card (Home Assistant)
 
 Dieses Projekt zeigt, wie man mit einer SVG-Grafik und der `floorplan-card` Energieflüsse wie Solar, Batterie, Netz und Hausverbrauch visuell und dynamisch darstellt. Letztendlich müsst ihr im Beispielcode zur Card nur eure Entitäten/Sensoren austauschen und die Card sollte funktionieren. :) 
 
