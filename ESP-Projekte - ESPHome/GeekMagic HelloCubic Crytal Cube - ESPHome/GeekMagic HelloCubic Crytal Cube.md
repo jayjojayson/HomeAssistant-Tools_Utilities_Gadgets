@@ -1,7 +1,7 @@
 # GeekMagic Hello Cubic lite / Crystal Cube
 Simple ESPHome Code for HelloCubic in Home Assistant
 
-<img width="48%" height="auto" alt="image" src="https://github.com/jayjojayson/Sun-Position-Card/blob/main/images/geekmagic-crystal-cube.jpeg" /> 
+<img width="45%" height="auto" alt="image" src="https://github.com/jayjojayson/HomeAssistant-Tools_Utilities_Gadgets/blob/main/ESP-Projekte%20-%20ESPHome/GeekMagic%20HelloCubic%20Crytal%20Cube%20-%20ESPHome/images/geekmagic-crystal-cube.jpeg" /> 
 
 
 It's more for me to keep the code it in Mind. But if you like it, you can use it of course.
@@ -14,7 +14,7 @@ In Attach is a simple ESPHome Code for the crystal Cube / hello cubic lite. Simp
 - Have fun
 
 
-<img width="48%" height="auto" alt="image" src="https://github.com/jayjojayson/Sun-Position-Card/blob/main/images/geekmagic-crystal-cube-ha.png" /> 
+<img width="33%" height="auto" alt="image" src="https://github.com/jayjojayson/HomeAssistant-Tools_Utilities_Gadgets/blob/main/ESP-Projekte%20-%20ESPHome/GeekMagic%20HelloCubic%20Crytal%20Cube%20-%20ESPHome/images/geekmagic-crystal-cube-ha.png" /> 
 
 
 ```yaml
