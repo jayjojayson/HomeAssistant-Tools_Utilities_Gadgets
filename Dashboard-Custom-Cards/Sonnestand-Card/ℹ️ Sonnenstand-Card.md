@@ -1,5 +1,14 @@
 # ☀️ Sonnenstand Custom Card
 
+
+Besser benutzt ihr meine inzwischen entstanden Custom Card die über Hacs installiert un dim Anschluss bequem konfiguriert werden kann.
+
+https://github.com/jayjojayson/Sun-Position-Card
+
+<img width="45%" height="auto" alt="image" src="https://github.com/user-attachments/assets/abf74e5d-bd70-4238-9d43-aafdf5192966" />
+
+---
+
 ![Beispiel-Bild](https://github.com/user-attachments/assets/38152fe6-310c-4739-93ad-97fd67fa4f10)
 
 Ich weiß, es gibt auch diese Zenit-Card, aber wer es kompakt und im gleichen Stil mag ist mit den Sonnestand-Card gut beraten. Die Card ist eine Kombination aus einer custom-stack-in-card und einer grid-layout-card.
