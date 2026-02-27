@@ -562,9 +562,10 @@ display:
       }
 ```
 
-Zum Abschluß brauchte ich natürlich noch ein passendes Gehäuse. Ich habe den Ständer selber gezeichnet und ein fertiges Gehäuse dazu ausgedruckt. Das Gehäuse ist auf meiner Druckseite mit verlinkt.
+Zum Abschluß brauchte 
+ich natürlich noch ein passendes Gehäuse. Ich habe den Ständer selber gezeichnet und ein fertiges Gehäuse dazu ausgedruckt. Das Gehäuse ist auf meiner Druckseite mit verlinkt.
 
-![image](https://github.com/user-attachments/assets/9f2a5c66-43f8-4f06-9fd0-677b60147c6e)[Printables.com](https://www.printables.com/model/1058652-esp32-28-inch-cyd-display-stand)
+<img width="690" height="362" alt="430665253-9f2a5c66-43f8-4f06-9fd0-677b60147c6e" src="https://github.com/user-attachments/assets/276e9b9a-75b2-47f9-9e27-834c621ca3f4" />
 
 ### [ESP32 2.8 inch CYD Display Stand by Jay | Download free STL model |... ](https://www.printables.com/model/1058652-esp32-28-inch-cyd-display-stand)
 
